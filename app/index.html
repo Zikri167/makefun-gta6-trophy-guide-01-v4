@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — the GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-text">
+    <h1>Leonida Legend</h1>
+    <p class="tagline">The GTA VI trophy guide &amp; tracker. All 55 PlayStation 5 trophies — 1 platinum, 2 gold, 6 silver, 46 bronze — each with its official description, a guide in our own words, its sources, a roadmap stage and a missable verdict.</p>
+  </div>
+  <div class="progress-box">
+    <p id="progress-count">0 of 55 earned</p>
+    <div class="progress-bar"><div id="progress-fill"></div></div>
+    <p id="grade-tally">Platinum 0/1 · Gold 0/2 · Silver 0/6 · Bronze 0/46</p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Views">
+  <button type="button" class="tab active" data-view="guide">Guide &amp; Tracker</button>
+  <button type="button" class="tab" data-view="roadmap">Roadmap to Platinum</button>
+  <button type="button" class="tab" data-view="missables">Missables</button>
+  <span class="tabs-spacer"></span>
+  <button type="button" id="export">Export progress</button>
+  <label class="import-btn">Import progress<input id="import" type="file" accept="application/json" hidden></label>
+</nav>
+
+<main>
+  <section id="view-guide">
+    <div class="preplay-warning">
+      <h2>Before you play — two trophies can be lost</h2>
+      <p><strong>Strangers &amp; Freaks</strong> (complete 8 stranger mission strands) and <strong>Actions Speak Louder</strong> (make all unique choices in the story) are rated <em>Likely missable</em>: their content is optional and one-off, and the official list promises no replay for either. The habits that save both cost nothing — start every stranger strand the moment you meet its owner, finish strands before pushing chapters, and keep a manual save before chapters end and before choices land. The reasoning behind every verdict, trophy by trophy, is on the Missables tab.</p>
+    </div>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Search trophies by name or description…" aria-label="Search trophies">
+      <div class="chips" id="kind-chips" role="group" aria-label="Filter by kind">
+        <button type="button" class="chip active" data-kind="all">All</button>
+        <button type="button" class="chip" data-kind="story">Story</button>
+        <button type="button" class="chip" data-kind="missable">Missable</button>
+        <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+        <button type="button" class="chip" data-kind="activities">Activities</button>
+        <button type="button" class="chip" data-kind="online">Partner / Online</button>
+      </div>
+      <label class="toolbar-label">Grade
+        <select id="grade-filter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="toolbar-check"><input type="checkbox" id="spoiler-toggle"> Spoiler shield: hide story trophies until earned</label>
+      <label class="toolbar-check"><input type="checkbox" id="hide-earned"> Hide earned</label>
+    </div>
+    <p id="list-summary" class="list-summary"></p>
+    <div class="guide-layout">
+      <div id="trophy-list" class="trophy-list"></div>
+      <aside id="detail-pane" class="detail-pane" aria-label="Trophy guide"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" hidden>
+    <div id="roadmap"></div>
+  </section>
+
+  <section id="view-missables" hidden>
+    <div id="missables"></div>
+  </section>
+</main>
+
+<footer class="colophon">
+  <p><strong>Sources.</strong> Trophy names, descriptions and grades: the official PlayStation 5 list as published via <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase</a>; progress targets PlayStation tracks: <a href="https://psnprofiles.com/trophies/43531-grand-theft-auto-vi">PSNProfiles</a>. Every guide, roadmap stage and missable verdict is this guide's own work, reasoned from the official descriptions and not yet checked in the game — where a description is a riddle, the guide says so instead of inventing an answer. No Rockstar Games artwork is used; the look is our own. Works fully offline; progress never leaves your browser unless you export it.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
